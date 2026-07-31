@@ -1,0 +1,105 @@
+@import "../design-system/tokens.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply bg-paper text-ink antialiased;
+    font-family: var(--bv-font-body);
+    font-size: var(--bv-text-body);
+    line-height: var(--bv-leading-normal);
+  }
+
+  html[lang="ar"] body,
+  html[dir="rtl"] body {
+    font-family: var(--bv-font-arabic);
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--bv-signal) 35%, transparent);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--bv-focus);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .bv-container {
+    @apply mx-auto w-full max-w-bv px-4 sm:px-6 lg:px-8;
+  }
+
+  .bv-section {
+    @apply py-16 md:py-24;
+  }
+
+  .bv-hairline {
+    border-color: var(--bv-line);
+  }
+
+  .bv-grid-bg {
+    background-image:
+      linear-gradient(to right, var(--bv-grid) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--bv-grid) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .bv-display {
+    font-family: var(--bv-font-display);
+    font-size: var(--bv-text-display);
+    line-height: var(--bv-leading-tight);
+    letter-spacing: -0.03em;
+    font-weight: 700;
+  }
+
+  .bv-h1 {
+    font-family: var(--bv-font-display);
+    font-size: var(--bv-text-h1);
+    line-height: var(--bv-leading-tight);
+    letter-spacing: -0.025em;
+    font-weight: 700;
+  }
+
+  .bv-h2 {
+    font-family: var(--bv-font-display);
+    font-size: var(--bv-text-h2);
+    line-height: var(--bv-leading-snug);
+    letter-spacing: -0.02em;
+    font-weight: 650;
+  }
+
+  .bv-h3 {
+    font-size: var(--bv-text-h3);
+    line-height: var(--bv-leading-snug);
+    font-weight: 600;
+  }
+
+  .bv-small {
+    font-size: var(--bv-text-small);
+    color: var(--bv-ink-muted);
+  }
+
+  .bv-mono {
+    font-family: var(--bv-font-mono);
+    font-size: var(--bv-text-mono);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .bv-prose {
+    @apply max-w-3xl text-muted;
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "meta": {
+    "siteName": "Boliveer",
+    "defaultTitle": "Boliveer — Technology Company",
+    "defaultDescription": "Boliveer builds digital products, platforms, and AI systems. Parent company of Madar 360."
+  },
+  "system": {
+    "statusOnline": "Products online",
+    "statusBuilding": "Building next",
+    "bootInit": "Initializing Boliveer Control Plane",
+    "bootSkip": "Skip",
+    "commandPlaceholder": "Jump to page, product, or action…",
+    "commandHint": "Command",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "themeSystem": "System",
+    "language": "Language",
+    "openMenu": "Open menu",
+    "close": "Close",
+    "search": "Search"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "vision": "Vision",
+    "products": "Products",
+    "madar": "Madar 360",
+    "future": "Future products",
+    "technology": "Technology",
+    "ai": "AI",
+    "engineering": "Engineering",
+    "industries": "Industries",
+    "partners": "Partners",
+    "investors": "Investors",
+    "careers": "Careers",
+    "blog": "Blog",
+    "media": "Media",
+    "pressKit": "Press kit",
+    "contact": "Contact",
+    "support": "Support",
+    "demo": "Request demo",
+    "partnership": "Partnership",
+    "enterprise": "Enterprise",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "cookies": "Cookies"
+  },
+  "home": {
+    "brand": "Boliveer",
+    "headline": "We build the systems behind modern commerce.",
+    "support": "A technology company that owns platforms, AI systems, and the ventures that follow — starting with Madar 360.",
+    "ctaPrimary": "Enter Madar 360",
+    "ctaSecondary": "Request a demo",
+    "registryTitle": "Product registry",
+    "registryBody": "Every Boliveer product lives in one control plane. Madar 360 is live. More slots are intentional.",
+    "capabilityTitle": "Capability constellation",
+    "proofTitle": "Built for serious operators",
+    "proofBody": "Egypt, Saudi Arabia, the GCC — then the world. Enterprise depth without startup theater."
+  },
+  "about": {
+    "title": "About Boliveer",
+    "lede": "Boliveer is not a startup pitch. It is a technology company that owns digital products, platforms, and AI systems.",
+    "body": "We are the parent company of Madar 360 — a unified commerce and services platform. Future products will appear under the same control plane, each with its own depth, all under Boliveer ownership."
+  },
+  "vision": {
+    "title": "Vision",
+    "lede": "Build world-class technology companies from the Middle East — platforms that operators trust for decades.",
+    "body": "Boliveer exists to own the hard layers: multi-service platforms, payments, fleet, merchant systems, and AI inside the control plane — not bolted on."
+  },
+  "products": {
+    "title": "Products",
+    "lede": "A registry of platforms Boliveer owns and operates.",
+    "futureTitle": "Future products",
+    "futureLede": "Empty slots are not voids — they are reserved capacity in the company OS.",
+    "statusLive": "Live",
+    "statusBeta": "Beta",
+    "statusComing": "Coming",
+    "viewProduct": "Open product"
+  },
+  "madar": {
+    "title": "Madar 360",
+    "lede": "Enterprise multi-service platform for unified commerce and services.",
+    "capabilitiesTitle": "Capabilities",
+    "ctaDemo": "Request demo",
+    "ctaEnterprise": "Enterprise solution",
+    "ctaPartner": "Become a partner"
+  },
+  "technology": {
+    "title": "Technology",
+    "lede": "Platform substrate, reliability, and integration depth for operators at scale.",
+    "body": "Boliveer technology is designed as a control plane: clear service boundaries, observable systems, and APIs that future products can plug into."
+  },
+  "ai": {
+    "title": "AI",
+    "lede": "AI services embedded in the operating surface — decisions, automation, and intelligence where work happens.",
+    "body": "We do not ship AI as decoration. Inside Madar 360 and future Boliveer products, AI services sit beside payments, fleet, and merchant operations."
+  },
+  "engineering": {
+    "title": "Engineering",
+    "lede": "Craft, rigor, and systems thinking.",
+    "body": "Engineering at Boliveer means production standards: performance budgets, accessibility, SEO as architecture, and code that scales with unlimited products and locales."
+  },
+  "industries": {
+    "title": "Industries",
+    "lede": "Where Boliveer platforms create leverage."
+  },
+  "partners": {
+    "title": "Partners",
+    "lede": "Build with Boliveer — technology, go-to-market, and ecosystem alliances.",
+    "cta": "Request partnership"
+  },
+  "investors": {
+    "title": "Investors",
+    "lede": "Future-ready investor relations surface.",
+    "body": "This workspace will host governance updates, narratives, and materials as Boliveer expands. For inquiries, use the contact channel."
+  },
+  "careers": {
+    "title": "Careers",
+    "lede": "Join a company that builds serious technology.",
+    "apply": "Apply",
+    "openRoles": "Open roles"
+  },
+  "blog": {
+    "title": "Blog",
+    "lede": "Notes on platforms, AI, and building from the Middle East.",
+    "read": "Read"
+  },
+  "media": {
+    "title": "Media",
+    "lede": "Newsroom signals and company narrative assets."
+  },
+  "press": {
+    "title": "Press kit",
+    "lede": "Brand marks, product facts, and contact for press.",
+    "contact": "press@boliveer.com"
+  },
+  "contact": {
+    "title": "Contact",
+    "lede": "Reach the Boliveer control plane.",
+    "success": "Message received."
+  },
+  "support": {
+    "title": "Support",
+    "lede": "Operational help for partners and operators.",
+    "success": "Support request received."
+  },
+  "demo": {
+    "title": "Request a demo",
+    "lede": "See Madar 360 as an operating system — not a slide deck.",
+    "success": "Demo request received.",
+    "booking": "Preferred time"
+  },
+  "partnership": {
+    "title": "Partnership",
+    "lede": "Propose an alliance with Boliveer.",
+    "success": "Partnership request received."
+  },
+  "enterprise": {
+    "title": "Enterprise solution",
+    "lede": "Scale requirements, multi-market ops, and custom deployment paths.",
+    "success": "Enterprise request received."
+  },
+  "legal": {
+    "privacyTitle": "Privacy policy",
+    "termsTitle": "Terms of use",
+    "cookiesTitle": "Cookie policy",
+    "privacyBody": "Boliveer processes contact and product inquiry data to respond to requests. We do not sell personal data. Contact hello@boliveer.com for privacy inquiries.",
+    "termsBody": "Use of this website is governed by applicable law. Product terms for Madar 360 and other Boliveer platforms are provided under separate agreements.",
+    "cookiesBody": "We use essential cookies for locale and theme preferences. Analytics cookies load only when configured. You can control non-essential tracking via your browser."
+  },
+  "forms": {
+    "name": "Name",
+    "email": "Email",
+    "company": "Company",
+    "role": "Role",
+    "topic": "Topic",
+    "message": "Message",
+    "interest": "Interest",
+    "notes": "Notes",
+    "partnerType": "Partnership type",
+    "scale": "Scale",
+    "needs": "Needs",
+    "linkedin": "LinkedIn / portfolio",
+    "submit": "Submit",
+    "subscribe": "Subscribe",
+    "sending": "Sending…"
+  },
+  "faq": {
+    "whatIsBoliveerQ": "What is Boliveer?",
+    "whatIsBoliveerA": "Boliveer is a technology company that owns digital products, platforms, and AI systems. It is the parent company of Madar 360.",
+    "whatIsMadarQ": "What is Madar 360?",
+    "whatIsMadarA": "Madar 360 is an enterprise multi-service platform covering ride hailing, delivery, marketplace, payments, Merchant OS, AI services, and more.",
+    "regionsQ": "Which regions do you serve?",
+    "regionsA": "Primary markets are Egypt, Saudi Arabia, and the GCC, with a long-term global trajectory."
+  },
+  "cta": {
+    "bandTitle": "Ready to operate with Boliveer?",
+    "bandBody": "Demo Madar 360, explore partnership, or start an enterprise conversation.",
+    "demo": "Request demo",
+    "partner": "Partnership",
+    "enterprise": "Enterprise"
+  },
+  "footer": {
+    "tagline": "Technology company. Product owner. Control plane.",
+    "newsletter": "Signal updates",
+    "rights": "All rights reserved."
+  },
+  "solutions": {
+    "title": "Solution",
+    "lede": "Industry capability path generated from the Boliveer content graph."
+  }
+}
