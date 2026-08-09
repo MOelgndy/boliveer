@@ -9,14 +9,16 @@ services:
     plan: starter
     region: frankfurt
     autoDeploy: true
-    buildCommand: npm ci && npm run build
+    # --include=dev: Render may set NODE_ENV=production during install,
+    # which would skip Tailwind/TypeScript and break `next build`.
+    buildCommand: npm ci --include=dev && npm run build
     startCommand: npm run start
     healthCheckPath: /en
     envVars:
       - key: NODE_VERSION
         value: "22"
-      - key: NODE_ENV
-        value: production
+      - key: NPM_CONFIG_PRODUCTION
+        value: "false"
       - key: NEXT_PUBLIC_SITE_URL
         sync: false
       - key: NEXT_PUBLIC_FLAG_COMMAND_PALETTE
