@@ -1,11 +1,13 @@
 import type { ReactNode } from "react";
 import { notFound } from "next/navigation";
+import Script from "next/script";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
-import { Syne, IBM_Plex_Sans, IBM_Plex_Sans_Arabic, IBM_Plex_Mono } from "next/font/google";
+import { Geist, Geist_Mono, IBM_Plex_Sans_Arabic } from "next/font/google";
 import { routing, type Locale } from "@/i18n/routing";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { AnalyticsProvider } from "@/components/providers/AnalyticsProvider";
+import { MotionProvider } from "@/components/providers/MotionProvider";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { organizationJsonLd } from "@/lib/seo";
 import type { Metadata } from "next";
@@ -25,16 +27,9 @@ export const metadata: Metadata = {
   },
 };
 
-const display = Syne({
+const sans = Geist({
   subsets: ["latin"],
-  variable: "--font-display",
-  display: "swap",
-});
-
-const body = IBM_Plex_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-body",
+  variable: "--font-sans",
   display: "swap",
 });
 
@@ -45,9 +40,8 @@ const arabic = IBM_Plex_Sans_Arabic({
   display: "swap",
 });
 
-const mono = IBM_Plex_Mono({
+const mono = Geist_Mono({
   subsets: ["latin"],
-  weight: ["400", "500"],
   variable: "--font-mono",
   display: "swap",
 });
@@ -77,21 +71,24 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       dir={dir}
-      className={`${display.variable} ${body.variable} ${arabic.variable} ${mono.variable}`}
+      className={`${sans.variable} ${arabic.variable} ${mono.variable}`}
       suppressHydrationWarning
     >
       <body>
         <JsonLd data={organizationJsonLd()} />
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider>
-            <AnalyticsProvider>{children}</AnalyticsProvider>
+            <MotionProvider>
+              <AnalyticsProvider>{children}</AnalyticsProvider>
+            </MotionProvider>
           </ThemeProvider>
         </NextIntlClientProvider>
         {process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN && (
-          <script
+          <Script
             defer
             data-domain={process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN}
             src="https://plausible.io/js/script.js"
+            strategy="afterInteractive"
           />
         )}
       </body>

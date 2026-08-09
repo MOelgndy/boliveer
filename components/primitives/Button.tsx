@@ -6,18 +6,18 @@ type Variant = "primary" | "secondary" | "ghost" | "signal";
 type Size = "sm" | "md" | "lg";
 
 const variants: Record<Variant, string> = {
-  primary:
-    "bg-ink text-paper hover:opacity-90 border border-transparent",
+  primary: "bg-ink text-paper hover:opacity-90 border border-transparent",
   secondary:
-    "bg-transparent text-ink border border-line-strong hover:border-ink",
+    "bg-elevated text-ink border border-line-strong hover:border-ink",
   ghost: "bg-transparent text-muted hover:text-ink border border-transparent",
-  signal: "bg-signal text-paper hover:bg-signal-strong border border-transparent",
+  signal:
+    "bg-signal text-paper hover:bg-signal-strong border border-transparent",
 };
 
 const sizes: Record<Size, string> = {
-  sm: "h-9 px-3 text-sm",
-  md: "h-11 px-4 text-sm",
-  lg: "h-12 px-5 text-base",
+  sm: "h-8 px-3.5 text-[13px]",
+  md: "h-9 px-4 text-sm",
+  lg: "h-10 px-5 text-sm",
 };
 
 type Common = {
@@ -46,7 +46,7 @@ export function Button({
   ...props
 }: ButtonAsButton | ButtonAsLink) {
   const classes = cn(
-    "inline-flex items-center justify-center gap-2 rounded-md font-medium transition duration-fast ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal disabled:opacity-50",
+    "inline-flex items-center justify-center gap-2 rounded-full font-medium transition duration-fast ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal disabled:opacity-50",
     variants[variant],
     sizes[size],
     className,

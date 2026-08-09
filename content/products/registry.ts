@@ -62,6 +62,84 @@ export const products: Product[] = [
     cta: ["demo", "enterprise", "partner"],
     mark: "M360",
   },
+  {
+    slug: "boliveer-studio",
+    status: "coming",
+    name: {
+      en: "Boliveer Studio",
+      ar: "بوليفير ستوديو",
+    },
+    tagline: {
+      en: "Venture build system for the next Boliveer products.",
+      ar: "نظام بناء المشاريع لمنتجات بوليفير التالية.",
+    },
+    description: {
+      en: "Boliveer Studio is our internal venture system — discovery, product design, full-stack build, and launch readiness for new applications beyond Madar 360.",
+      ar: "بوليفير ستوديو نظام المشاريع الداخلي — اكتشاف وتصميم منتج وبناء كامل وجاهزية إطلاق للتطبيقات الجديدة بعد مدار 360.",
+    },
+    category: ["venture", "platform"],
+    capabilities: ["business-os", "ai-services"],
+    heroMedia: {
+      src: "/brand/boliveer-mark.svg",
+      alt: {
+        en: "Boliveer Studio",
+        ar: "بوليفير ستوديو",
+      },
+    },
+    seo: {
+      title: {
+        en: "Boliveer Studio — Next Ventures",
+        ar: "بوليفير ستوديو — المشاريع القادمة",
+      },
+      description: {
+        en: "How Boliveer discovers gaps and builds the next generation of products.",
+        ar: "كيف تكتشف بوليفير الفجوات وتبني الجيل التالي من المنتجات.",
+      },
+    },
+    relatedIndustries: ["enterprise"],
+    related: ["products", "technology"],
+    cta: ["partner", "enterprise"],
+    mark: "STD",
+  },
+  {
+    slug: "signal-media",
+    status: "coming",
+    name: {
+      en: "Signal Media",
+      ar: "سيجنال ميديا",
+    },
+    tagline: {
+      en: "Go-to-market and media engine for Boliveer products.",
+      ar: "محرك دخول السوق والإعلام لمنتجات بوليفير.",
+    },
+    description: {
+      en: "Signal Media prepares Boliveer products for public success — narrative, brand systems, press readiness, and growth surfaces so launches are seen and trusted.",
+      ar: "سيجنال ميديا تجهّز منتجات بوليفير للنجاح العام — سرد وأنظمة علامة وجاهزية صحافة وأسطح نمو حتى تُرى الإطلاقات وتُوثق.",
+    },
+    category: ["media", "growth"],
+    capabilities: ["ai-services"],
+    heroMedia: {
+      src: "/brand/boliveer-mark.svg",
+      alt: {
+        en: "Signal Media",
+        ar: "سيجنال ميديا",
+      },
+    },
+    seo: {
+      title: {
+        en: "Signal Media — Boliveer",
+        ar: "سيجنال ميديا — بوليفير",
+      },
+      description: {
+        en: "Media and go-to-market capability inside Boliveer.",
+        ar: "قدرة الإعلام ودخول السوق داخل بوليفير.",
+      },
+    },
+    relatedIndustries: ["enterprise"],
+    related: ["media", "press-kit"],
+    cta: ["partner"],
+    mark: "SIG",
+  },
 ];
 
 export function getProduct(slug: string) {

@@ -2,12 +2,12 @@
   "meta": {
     "siteName": "Boliveer",
     "defaultTitle": "Boliveer — Technology Company",
-    "defaultDescription": "Boliveer builds digital products, platforms, and AI systems. Parent company of Madar 360."
+    "defaultDescription": "Boliveer finds business gaps, builds full applications and platforms, and takes them to market success. Parent company of Madar 360."
   },
   "system": {
     "statusOnline": "Products online",
     "statusBuilding": "Building next",
-    "bootInit": "Initializing Boliveer Control Plane",
+    "bootInit": "Initializing Boliveer",
     "bootSkip": "Skip",
     "commandPlaceholder": "Jump to page, product, or action…",
     "commandHint": "Command",
@@ -47,34 +47,77 @@
   },
   "home": {
     "brand": "Boliveer",
-    "headline": "We build the systems behind modern commerce.",
-    "support": "A technology company that owns platforms, AI systems, and the ventures that follow — starting with Madar 360.",
-    "ctaPrimary": "Enter Madar 360",
-    "ctaSecondary": "Request a demo",
-    "registryTitle": "Product registry",
-    "registryBody": "Every Boliveer product lives in one control plane. Madar 360 is live. More slots are intentional.",
+    "headline": "We turn business gaps into products the market remembers.",
+    "support": "Boliveer is a technology company that discovers real market gaps, builds complete applications and platforms, and takes them through launch to media and commercial success — Madar 360 is our flagship proof.",
+    "ctaPrimary": "Explore Boliveer",
+    "ctaSecondary": "See Madar 360",
+    "registryTitle": "Portfolio in motion",
+    "registryBody": "Madar 360 is live — a unified commerce and services platform. New Boliveer ventures are already in the pipeline. We don't stop at one product.",
     "capabilityTitle": "Capability constellation",
     "proofTitle": "Built for serious operators",
-    "proofBody": "Egypt, Saudi Arabia, the GCC — then the world. Enterprise depth without startup theater."
+    "proofBody": "Egypt, Saudi Arabia, the GCC — then the world. We ship full products, not pitches: engineering, brand, go-to-market, and media readiness.",
+    "beat1": "Find the gap.",
+    "beat2": "Build the product. Own the market.",
+    "finale": "We turn business gaps into products the market remembers.",
+    "visionTitle": "Boliveer before any single product.",
+    "visionBody": "Madar 360 proves the model. The company exists to repeat it — identify unmet demand, engineer the full stack, launch with clarity, and earn presence in the market and the media.",
+    "industriesTitle": "Markets we operate in",
+    "industriesBody": "Each industry is a real operating environment — commerce, mobility, hospitality, health, and enterprise — where Boliveer products solve concrete gaps.",
+    "strip1": "Discover",
+    "strip2": "Build",
+    "strip3": "Launch",
+    "strip4": "Scale",
+    "readoutFlagship": "Flagship",
+    "readoutFlagshipValue": "Madar 360 — Live",
+    "readoutServices": "Model",
+    "readoutServicesValue": "Gap → Product → Market",
+    "readoutRegion": "Region",
+    "readoutRegionValue": "MENA → Global",
+    "readoutStatus": "Status",
+    "readoutStatusValue": "Building & shipping",
+    "flagshipLive": "Live",
+    "flagshipEnter": "Open Madar 360",
+    "futureSlot": "Next ventures",
+    "futureSlotBody": "New Boliveer products are designed, built, and prepared for launch here.",
+    "methodEyebrow": "How we work",
+    "methodTitle": "From gap to market success",
+    "methodBody": "Four moves. One company standard — applied to Madar 360 and every product that follows.",
+    "method1Title": "Find the gap",
+    "method1Body": "Study markets, operators, and friction. Validate demand before we write a line of product code.",
+    "method2Title": "Build the full product",
+    "method2Body": "Apps, platforms, APIs, ops tooling, and AI — shipped as a complete system, not a prototype.",
+    "method3Title": "Launch & operate",
+    "method3Body": "Go live with reliability, support, and commercial paths that operators can trust day one.",
+    "method4Title": "Win in media & market",
+    "method4Body": "Brand, narrative, press, and growth — so the product is seen, trusted, and adopted.",
+    "methodCta": "Read the company story",
+    "pipelineTitle": "In the pipeline",
+    "pipelineBody": "Ventures under design and build — each follows the same Boliveer standard."
   },
   "about": {
     "title": "About Boliveer",
-    "lede": "Boliveer is not a startup pitch. It is a technology company that owns digital products, platforms, and AI systems.",
-    "body": "We are the parent company of Madar 360 — a unified commerce and services platform. Future products will appear under the same control plane, each with its own depth, all under Boliveer ownership."
+    "lede": "Boliveer is a technology company that finds business gaps, builds complete products, and takes them to market success.",
+    "body": "We are not an agency and not a one-app studio. Boliveer owns digital products and platforms end to end — product, engineering, brand, and go-to-market. Madar 360 is our flagship: a unified commerce and services platform. Future Boliveer ventures follow the same path from idea to live product to public presence.",
+    "pillar1Title": "Company, not a single app",
+    "pillar1Body": "Madar 360 is proof. The brand is Boliveer — a builder of multiple products across markets.",
+    "pillar2Title": "Full stack to success",
+    "pillar2Body": "We build the application, the platform, the operations surface, and the story the market hears.",
+    "pillar3Title": "MENA first, global ambition",
+    "pillar3Body": "We start where we operate deepest — Egypt, Saudi Arabia, the GCC — then expand."
   },
   "vision": {
     "title": "Vision",
-    "lede": "Build world-class technology companies from the Middle East — platforms that operators trust for decades.",
-    "body": "Boliveer exists to own the hard layers: multi-service platforms, payments, fleet, merchant systems, and AI inside the control plane — not bolted on."
+    "lede": "Become the company that turns unmet demand in the Middle East into world-class digital products.",
+    "body": "Boliveer exists to own hard problems: commerce, mobility, payments, merchant systems, AI, and the ventures still forming. We measure success by products that ship, scale, and earn trust — in operations and in the media."
   },
   "products": {
     "title": "Products",
-    "lede": "A registry of platforms Boliveer owns and operates.",
+    "lede": "What Boliveer owns, operates, and is building next.",
     "futureTitle": "Future products",
-    "futureLede": "Empty slots are not voids — they are reserved capacity in the company OS.",
+    "futureLede": "Reserved slots for the next Boliveer ventures — from validated gap to public launch.",
     "statusLive": "Live",
     "statusBeta": "Beta",
-    "statusComing": "Coming",
+    "statusComing": "In build",
     "viewProduct": "Open product"
   },
   "madar": {
@@ -87,22 +130,22 @@
   },
   "technology": {
     "title": "Technology",
-    "lede": "Platform substrate, reliability, and integration depth for operators at scale.",
-    "body": "Boliveer technology is designed as a control plane: clear service boundaries, observable systems, and APIs that future products can plug into."
+    "lede": "Production-grade platforms — APIs, reliability, and depth operators can run on.",
+    "body": "Boliveer technology is built for products that last: clear service boundaries, observable systems, and APIs that new ventures plug into without rewriting the foundation."
   },
   "ai": {
     "title": "AI",
-    "lede": "AI services embedded in the operating surface — decisions, automation, and intelligence where work happens.",
-    "body": "We do not ship AI as decoration. Inside Madar 360 and future Boliveer products, AI services sit beside payments, fleet, and merchant operations."
+    "lede": "Intelligence inside the product — decisions and automation where work happens.",
+    "body": "We do not ship AI as decoration. Across Madar 360 and future Boliveer products, AI sits beside payments, fleet, and merchant operations."
   },
   "engineering": {
     "title": "Engineering",
     "lede": "Craft, rigor, and systems thinking.",
-    "body": "Engineering at Boliveer means production standards: performance budgets, accessibility, SEO as architecture, and code that scales with unlimited products and locales."
+    "body": "Engineering at Boliveer means production standards: performance budgets, accessibility, SEO as architecture, and code that scales across products and locales."
   },
   "industries": {
     "title": "Industries",
-    "lede": "Where Boliveer platforms create leverage."
+    "lede": "Markets where Boliveer products close real operational gaps."
   },
   "partners": {
     "title": "Partners",
@@ -111,23 +154,33 @@
   },
   "investors": {
     "title": "Investors",
-    "lede": "Future-ready investor relations surface.",
-    "body": "This workspace will host governance updates, narratives, and materials as Boliveer expands. For inquiries, use the contact channel."
+    "lede": "A company that builds products — and repeats the model.",
+    "body": "Boliveer is building a portfolio of digital products from the Middle East. Madar 360 is live; the pipeline continues. For investor inquiries, use the contact channel."
   },
   "careers": {
-    "title": "Careers",
-    "lede": "Join a company that builds serious technology.",
-    "apply": "Apply",
-    "openRoles": "Open roles"
+    "title": "Build products the market will remember.",
+    "lede": "Join a company that finds gaps, ships full products, and takes them public — not a job board of side quests.",
+    "apply": "Enter role",
+    "openRoles": "Open roles",
+    "manifesto1": "Ship products, not theater.",
+    "manifesto2": "Own the gap end to end.",
+    "manifesto3": "Win with craft and clarity."
   },
   "blog": {
     "title": "Blog",
-    "lede": "Notes on platforms, AI, and building from the Middle East.",
+    "lede": "Notes on products, platforms, and building from the Middle East.",
     "read": "Read"
   },
   "media": {
     "title": "Media",
-    "lede": "Newsroom signals and company narrative assets."
+    "lede": "How Boliveer shows up in public — stories, assets, and press.",
+    "body": "We prepare every product for the room it will enter: clear narrative, brand assets, and channels for journalists and partners. Madar 360 is the first chapter; more will follow.",
+    "storyTitle": "Company narrative",
+    "storyBody": "Boliveer finds business gaps, builds complete applications, and takes them to market and media success.",
+    "assetsTitle": "Assets & channels",
+    "pressCta": "Press kit",
+    "blogCta": "Company blog",
+    "contactCta": "Press contact"
   },
   "press": {
     "title": "Press kit",
@@ -135,9 +188,9 @@
     "contact": "press@boliveer.com"
   },
   "contact": {
-    "title": "Contact",
-    "lede": "Reach the Boliveer control plane.",
-    "success": "Message received."
+    "title": "Talk to Boliveer",
+    "lede": "Partnerships, products, press, or enterprise — tell us the gap you see. We respond with precision.",
+    "success": "Message received. Our team will respond soon."
   },
   "support": {
     "title": "Support",
@@ -146,18 +199,18 @@
   },
   "demo": {
     "title": "Request a demo",
-    "lede": "See Madar 360 as an operating system — not a slide deck.",
+    "lede": "See Madar 360 as a live product — not a slide deck. Ask about other Boliveer ventures in build.",
     "success": "Demo request received.",
     "booking": "Preferred time"
   },
   "partnership": {
     "title": "Partnership",
-    "lede": "Propose an alliance with Boliveer.",
+    "lede": "Propose an alliance with Boliveer — technology, distribution, or go-to-market.",
     "success": "Partnership request received."
   },
   "enterprise": {
     "title": "Enterprise solution",
-    "lede": "Scale requirements, multi-market ops, and custom deployment paths.",
+    "lede": "Scale requirements, multi-market ops, and custom deployment paths across Boliveer products.",
     "success": "Enterprise request received."
   },
   "legal": {
@@ -187,23 +240,26 @@
   },
   "faq": {
     "whatIsBoliveerQ": "What is Boliveer?",
-    "whatIsBoliveerA": "Boliveer is a technology company that owns digital products, platforms, and AI systems. It is the parent company of Madar 360.",
+    "whatIsBoliveerA": "Boliveer is a technology company that finds business gaps, builds full applications and platforms, and takes them to market success. Madar 360 is our flagship product — not our only story.",
     "whatIsMadarQ": "What is Madar 360?",
-    "whatIsMadarA": "Madar 360 is an enterprise multi-service platform covering ride hailing, delivery, marketplace, payments, Merchant OS, AI services, and more.",
+    "whatIsMadarA": "Madar 360 is Boliveer's flagship enterprise multi-service platform — ride hailing, delivery, marketplace, payments, Merchant OS, AI services, and more.",
     "regionsQ": "Which regions do you serve?",
     "regionsA": "Primary markets are Egypt, Saudi Arabia, and the GCC, with a long-term global trajectory."
   },
   "cta": {
-    "bandTitle": "Ready to operate with Boliveer?",
-    "bandBody": "Demo Madar 360, explore partnership, or start an enterprise conversation.",
+    "bandTitle": "Have a gap worth building?",
+    "bandBody": "Talk to Boliveer about products, partnership, enterprise, or Madar 360.",
     "demo": "Request demo",
     "partner": "Partnership",
     "enterprise": "Enterprise"
   },
   "footer": {
-    "tagline": "Technology company. Product owner. Control plane.",
-    "newsletter": "Signal updates",
-    "rights": "All rights reserved."
+    "tagline": "Find the gap. Build the product. Win the market.",
+    "newsletter": "Company updates",
+    "rights": "All rights reserved.",
+    "finaleTitle": "The next product",
+    "finaleTitle2": "starts with a gap.",
+    "finalScene": "Boliveer"
   },
   "solutions": {
     "title": "Solution",

@@ -13,8 +13,17 @@
     html {
       scroll-behavior: auto;
     }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 
+  /* The viewport is stable: no transforms, no fixed-attachment backgrounds. */
   body {
     @apply bg-paper text-ink antialiased;
     font-family: var(--bv-font-body);
@@ -29,48 +38,65 @@
 
   ::selection {
     background: color-mix(in srgb, var(--bv-signal) 35%, transparent);
+    color: var(--bv-ink);
   }
 
   :focus-visible {
     outline: 2px solid var(--bv-focus);
-    outline-offset: 2px;
+    outline-offset: 3px;
   }
 }
 
 @layer components {
   .bv-container {
-    @apply mx-auto w-full max-w-bv px-4 sm:px-6 lg:px-8;
+    @apply mx-auto w-full max-w-bv px-5 sm:px-6 lg:px-8;
   }
 
   .bv-section {
-    @apply py-16 md:py-24;
+    @apply relative py-8;
   }
 
-  .bv-hairline {
-    border-color: var(--bv-line);
+  /* Light glass — reserved for small chrome surfaces only (system bar, dock). */
+  .bv-glass {
+    background: var(--bv-glass);
+    border: 1px solid var(--bv-glass-border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .bv-surface {
+    background: var(--bv-paper-elevated);
+    border: 1px solid var(--bv-line);
+    box-shadow: var(--bv-shadow-1);
+  }
+
+  /* Static, painted once. Never animated, never fixed. */
+  .bv-atmosphere {
+    background-image: var(--bv-atmosphere);
   }
 
   .bv-grid-bg {
     background-image:
       linear-gradient(to right, var(--bv-grid) 1px, transparent 1px),
       linear-gradient(to bottom, var(--bv-grid) 1px, transparent 1px);
-    background-size: 48px 48px;
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black, transparent);
   }
 
   .bv-display {
     font-family: var(--bv-font-display);
     font-size: var(--bv-text-display);
     line-height: var(--bv-leading-tight);
-    letter-spacing: -0.03em;
-    font-weight: 700;
+    letter-spacing: -0.035em;
+    font-weight: 600;
   }
 
   .bv-h1 {
     font-family: var(--bv-font-display);
     font-size: var(--bv-text-h1);
     line-height: var(--bv-leading-tight);
-    letter-spacing: -0.025em;
-    font-weight: 700;
+    letter-spacing: -0.03em;
+    font-weight: 600;
   }
 
   .bv-h2 {
@@ -78,13 +104,14 @@
     font-size: var(--bv-text-h2);
     line-height: var(--bv-leading-snug);
     letter-spacing: -0.02em;
-    font-weight: 650;
+    font-weight: 600;
   }
 
   .bv-h3 {
     font-size: var(--bv-text-h3);
     line-height: var(--bv-leading-snug);
     font-weight: 600;
+    letter-spacing: -0.01em;
   }
 
   .bv-small {
@@ -95,11 +122,19 @@
   .bv-mono {
     font-family: var(--bv-font-mono);
     font-size: var(--bv-text-mono);
-    letter-spacing: 0.04em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
   }
 
   .bv-prose {
-    @apply max-w-3xl text-muted;
+    @apply max-w-xl text-muted;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
   }
 }

@@ -61,7 +61,7 @@ export function ActionForm({
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 rounded-md border border-line bg-elevated p-6">
+    <form onSubmit={handleSubmit} className="space-y-4">
       {fields.map((field) => (
         <div key={field.name}>
           <Label htmlFor={field.name}>{t(field.labelKey)}</Label>

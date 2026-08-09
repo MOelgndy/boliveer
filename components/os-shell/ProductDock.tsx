@@ -4,16 +4,18 @@ import { t } from "@/lib/content";
 import type { Locale } from "@/i18n/routing";
 
 export function ProductDock({ locale }: { locale: Locale }) {
+  const live = products.filter((p) => p.status === "live" || p.status === "beta");
+
   return (
     <aside
-      className="fixed bottom-6 left-1/2 z-30 hidden -translate-x-1/2 items-center gap-2 rounded-md border border-line bg-elevated/90 px-2 py-2 shadow-bv2 backdrop-blur md:flex"
+      className="fixed bottom-6 left-1/2 z-30 hidden -translate-x-1/2 items-center gap-2 rounded-full border border-line bv-glass px-2 py-2 shadow-bv2 md:flex"
       aria-label="Product dock"
     >
-      {products.map((product) => (
+      {live.map((product) => (
         <Link
           key={product.slug}
           href={`/products/${product.slug}`}
-          className="group flex h-10 items-center gap-2 rounded-sm px-3 transition hover:bg-paper"
+          className="group flex h-11 items-center gap-2 rounded-full px-4 transition hover:bg-paper/70"
           title={t(product.name, locale)}
         >
           <span className="bv-mono text-signal">{product.mark}</span>
@@ -23,8 +25,9 @@ export function ProductDock({ locale }: { locale: Locale }) {
         </Link>
       ))}
       <Link
-        href="/products/future"
-        className="bv-mono flex h-10 items-center rounded-sm border border-dashed border-line px-3 text-muted transition hover:border-signal hover:text-signal"
+        href="/products"
+        className="bv-mono flex h-11 items-center rounded-full border border-dashed border-line px-4 text-muted transition hover:border-signal hover:text-signal"
+        title="All products"
       >
         +
       </Link>

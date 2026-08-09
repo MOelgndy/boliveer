@@ -1,6 +1,5 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
-import { PageHero } from "@/components/sections/PageHero";
-import { Container, Section } from "@/components/primitives/Container";
+import { MissionControl } from "@/components/sections/MissionControl";
 import { PartnershipForm } from "@/components/forms/forms.client";
 import { buildPageMetadata } from "@/lib/seo";
 import type { Locale } from "@/i18n/routing";
@@ -32,13 +31,8 @@ export default async function PartnershipPage({
   const tr = await getTranslations("partnership");
 
   return (
-    <>
-      <PageHero title={tr("title")} lede={tr("lede")} />
-      <Section>
-        <Container className="max-w-xl">
-          <PartnershipForm locale={locale} successMessage={tr("success")} />
-        </Container>
-      </Section>
-    </>
+    <MissionControl title={tr("title")} lede={tr("lede")} status="Alliance channel">
+      <PartnershipForm locale={locale} successMessage={tr("success")} />
+    </MissionControl>
   );
 }

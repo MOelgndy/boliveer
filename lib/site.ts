@@ -14,7 +14,7 @@ export const siteConfig = {
   locales: ["en", "ar"] as const,
   defaultLocale: "en" as const,
   description: {
-    en: "Boliveer builds digital products, platforms, and AI systems. Parent company of Madar 360 — a unified commerce and services platform.",
-    ar: "بوليفير تبني المنتجات الرقمية والمنصات وأنظمة الذكاء الاصطناعي. الشركة الأم لمنصة مدار 360 — منصة تجارة وخدمات موحّدة.",
+    en: "Boliveer finds real business gaps, builds full applications and platforms, and takes them to market success. Parent company of Madar 360.",
+    ar: "بوليفير تكتشف فجوات الأعمال الحقيقية، وتبني تطبيقات ومنصات كاملة، وتوصلها إلى النجاح في السوق. الشركة الأم لمدار 360.",
   },
 } as const;

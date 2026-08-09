@@ -1,6 +1,5 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
-import { PageHero } from "@/components/sections/PageHero";
-import { Container, Section } from "@/components/primitives/Container";
+import { MissionControl } from "@/components/sections/MissionControl";
 import { DemoForm } from "@/components/forms/forms.client";
 import { bookingProvider } from "@/lib/booking";
 import { buildPageMetadata } from "@/lib/seo";
@@ -35,27 +34,18 @@ export default async function DemoPage({
   const embed = bookingProvider.getEmbedUrl(locale);
 
   return (
-    <>
-      <PageHero title={tr("title")} lede={tr("lede")} />
-      <Section>
-        <Container className="grid max-w-4xl gap-8 lg:grid-cols-[1fr_1fr]">
-          <DemoForm
-            locale={locale}
-            successMessage={tr("success")}
-            slots={slots}
+    <MissionControl title={tr("title")} lede={tr("lede")} status="Demo uplink">
+      <DemoForm locale={locale} successMessage={tr("success")} slots={slots} />
+      {embed && (
+        <div className="mt-6 rounded-md border border-line p-4">
+          <p className="bv-mono mb-3 text-muted">{tr("booking")}</p>
+          <iframe
+            title={tr("booking")}
+            src={embed}
+            className="h-72 w-full rounded-sm border border-line"
           />
-          {embed && (
-            <div className="rounded-md border border-line p-4">
-              <p className="bv-mono mb-3 text-muted">{tr("booking")}</p>
-              <iframe
-                title={tr("booking")}
-                src={embed}
-                className="h-80 w-full rounded-sm border border-line"
-              />
-            </div>
-          )}
-        </Container>
-      </Section>
-    </>
+        </div>
+      )}
+    </MissionControl>
   );
 }

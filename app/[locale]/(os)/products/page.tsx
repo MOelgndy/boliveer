@@ -1,7 +1,7 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { PageHero } from "@/components/sections/PageHero";
-import { Container, Section } from "@/components/primitives/Container";
-import { Link } from "@/i18n/navigation";
+import { OrbitalProducts } from "@/components/sections/OrbitalProducts";
+import { CTABand } from "@/components/sections/CTABand";
 import { content, t } from "@/lib/content";
 import { buildPageMetadata } from "@/lib/seo";
 import type { Locale } from "@/i18n/routing";
@@ -23,6 +23,12 @@ export async function generateMetadata({
   });
 }
 
+function statusKey(status: string) {
+  if (status === "coming") return "statusComing";
+  if (status === "beta") return "statusBeta";
+  return "statusLive";
+}
+
 export default async function ProductsPage({
   params,
 }: {
@@ -32,43 +38,45 @@ export default async function ProductsPage({
   setRequestLocale(locale);
   const l = locale as Locale;
   const tr = await getTranslations("products");
+  const home = await getTranslations("home");
   const products = await content.products.list();
+  const flagship = products.find((p) => p.slug === "madar-360") ?? products[0];
+  const pipeline = products.filter((p) => p.slug !== flagship.slug);
 
   return (
     <>
       <PageHero title={tr("title")} lede={tr("lede")} />
-      <Section>
-        <Container className="space-y-4">
-          {products.map((product) => (
-            <Link
-              key={product.slug}
-              href={`/products/${product.slug}`}
-              className="block rounded-md border border-line bg-elevated p-6 transition hover:border-signal"
-            >
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <p className="bv-mono text-signal">
-                    {product.status === "live"
-                      ? tr("statusLive")
-                      : product.status === "beta"
-                        ? tr("statusBeta")
-                        : tr("statusComing")}
-                  </p>
-                  <h2 className="bv-h3 mt-2">{t(product.name, l)}</h2>
-                  <p className="mt-2 text-muted">{t(product.tagline, l)}</p>
-                </div>
-                <span className="bv-mono">{product.mark}</span>
-              </div>
-            </Link>
-          ))}
-          <Link
-            href="/products/future"
-            className="block rounded-md border border-dashed border-line p-6 text-muted transition hover:border-signal hover:text-signal"
-          >
-            {tr("futureTitle")}
-          </Link>
-        </Container>
-      </Section>
+      <section className="bv-section">
+        <div className="bv-container">
+          <OrbitalProducts
+            title={home("registryTitle")}
+            body={home("registryBody")}
+            liveLabel={home("flagshipLive")}
+            enterLabel={home("flagshipEnter")}
+            futureLabel={tr("futureTitle")}
+            futureSlotLabel={home("futureSlot")}
+            futureSlotBody={home("futureSlotBody")}
+            pipelineTitle={home("pipelineTitle")}
+            locale={l}
+            flagship={{
+              name: t(flagship.name, l),
+              tagline: t(flagship.tagline, l),
+              mark: flagship.mark,
+              href: `/products/${flagship.slug}`,
+              capabilities: flagship.capabilities,
+            }}
+            pipeline={pipeline.map((product) => ({
+              slug: product.slug,
+              name: t(product.name, l),
+              tagline: t(product.tagline, l),
+              mark: product.mark,
+              href: `/products/${product.slug}`,
+              statusLabel: tr(statusKey(product.status)),
+            }))}
+          />
+        </div>
+      </section>
+      <CTABand />
     </>
   );
 }

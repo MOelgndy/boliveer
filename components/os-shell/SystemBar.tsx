@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { ThemeSwitch } from "./ThemeSwitch";
@@ -22,19 +22,36 @@ export function SystemBar({ crumbs = [] }: { crumbs?: Crumb[] }) {
   const t = useTranslations("nav");
   const ts = useTranslations("system");
   const [open, setOpen] = useState(false);
+  const [elevated, setElevated] = useState(false);
+
+  useEffect(() => {
+    let ticking = false;
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        setElevated(window.scrollY > 12);
+        ticking = false;
+      });
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-paper/90 backdrop-blur">
+    <header
+      className={cn(
+        "sticky top-0 z-40 border-b transition-colors duration-fast",
+        elevated
+          ? "bv-glass border-line"
+          : "border-transparent bg-transparent",
+      )}
+    >
       <div className="bv-container flex h-shell items-center gap-4">
         <Link href="/" className="flex shrink-0 items-center gap-2" aria-label="Boliveer">
-          <Image
-            src="/brand/boliveer-mark.svg"
-            alt=""
-            width={28}
-            height={28}
-            priority
-          />
-          <span className="font-display text-lg font-bold tracking-tight">Boliveer</span>
+          <Image src="/brand/boliveer-mark.svg" alt="" width={24} height={24} priority />
+          <span className="text-[15px] font-semibold tracking-tight">Boliveer</span>
         </Link>
 
         <div className="hidden min-w-0 flex-1 md:block">
@@ -46,7 +63,7 @@ export function SystemBar({ crumbs = [] }: { crumbs?: Crumb[] }) {
             <Link
               key={link.href}
               href={link.href}
-              className="rounded-md px-2 py-1 text-sm text-muted transition hover:text-ink"
+              className="rounded-md px-2.5 py-1.5 text-[13px] text-muted transition duration-fast hover:text-ink"
             >
               {t(link.key)}
             </Link>
@@ -54,7 +71,8 @@ export function SystemBar({ crumbs = [] }: { crumbs?: Crumb[] }) {
         </nav>
 
         <div className="flex items-center gap-2">
-          <span className="bv-mono hidden text-[0.65rem] text-ok xl:inline">
+          <span className="bv-mono hidden items-center gap-2 text-[0.65rem] text-ok xl:inline-flex">
+            <span className="h-1.5 w-1.5 rounded-full bg-ok" aria-hidden />
             {ts("statusOnline")}
           </span>
           <CommandPalette />
@@ -62,7 +80,7 @@ export function SystemBar({ crumbs = [] }: { crumbs?: Crumb[] }) {
           <LocaleSwitch />
           <button
             type="button"
-            className="inline-flex h-8 w-8 items-center justify-center rounded-md border border-line text-muted lg:hidden"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-line text-muted lg:hidden"
             aria-expanded={open}
             aria-label={ts("openMenu")}
             onClick={() => setOpen((v) => !v)}
@@ -72,24 +90,23 @@ export function SystemBar({ crumbs = [] }: { crumbs?: Crumb[] }) {
         </div>
       </div>
 
-      <div
-        className={cn(
-          "border-t border-line bg-elevated lg:hidden",
-          open ? "block" : "hidden",
-        )}
-      >
+      <div className={cn("border-t border-line bg-paper lg:hidden", open ? "block" : "hidden")}>
         <nav className="bv-container flex flex-col gap-1 py-3" aria-label="Mobile">
           {primaryLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="rounded-md px-2 py-2 text-sm text-ink"
+              className="rounded-md px-2 py-2.5 text-sm text-ink"
               onClick={() => setOpen(false)}
             >
               {t(link.key)}
             </Link>
           ))}
-          <Link href="/contact" className="rounded-md px-2 py-2 text-sm text-ink" onClick={() => setOpen(false)}>
+          <Link
+            href="/contact"
+            className="rounded-md px-2 py-2.5 text-sm text-ink"
+            onClick={() => setOpen(false)}
+          >
             {t("contact")}
           </Link>
         </nav>

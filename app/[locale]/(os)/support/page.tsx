@@ -1,6 +1,5 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
-import { PageHero } from "@/components/sections/PageHero";
-import { Container, Section } from "@/components/primitives/Container";
+import { MissionControl } from "@/components/sections/MissionControl";
 import { FAQ } from "@/components/sections/FAQ";
 import { SupportForm } from "@/components/forms/forms.client";
 import { buildPageMetadata } from "@/lib/seo";
@@ -35,10 +34,11 @@ export default async function SupportPage({
 
   return (
     <>
-      <PageHero title={tr("title")} lede={tr("lede")} />
-      <Section>
-        <Container className="grid gap-10 lg:grid-cols-2">
-          <SupportForm locale={locale} successMessage={tr("success")} />
+      <MissionControl title={tr("title")} lede={tr("lede")} status="Support channel">
+        <SupportForm locale={locale} successMessage={tr("success")} />
+      </MissionControl>
+      <section className="bv-section">
+        <div className="bv-container max-w-3xl">
           <FAQ
             items={[
               {
@@ -51,8 +51,8 @@ export default async function SupportPage({
               },
             ]}
           />
-        </Container>
-      </Section>
+        </div>
+      </section>
     </>
   );
 }

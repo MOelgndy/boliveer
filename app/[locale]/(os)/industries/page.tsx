@@ -1,7 +1,7 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { PageHero } from "@/components/sections/PageHero";
-import { Container, Section } from "@/components/primitives/Container";
-import { Link } from "@/i18n/navigation";
+import { ImmersiveIndustries } from "@/components/sections/ImmersiveIndustries";
+import { CTABand } from "@/components/sections/CTABand";
 import { content, t } from "@/lib/content";
 import { buildPageMetadata } from "@/lib/seo";
 import type { Locale } from "@/i18n/routing";
@@ -23,6 +23,8 @@ export async function generateMetadata({
   });
 }
 
+const accents = ["signal", "ice", "ember", "signal", "ice"] as const;
+
 export default async function IndustriesPage({
   params,
 }: {
@@ -37,20 +39,21 @@ export default async function IndustriesPage({
   return (
     <>
       <PageHero title={tr("title")} lede={tr("lede")} />
-      <Section>
-        <Container className="grid gap-4 md:grid-cols-2">
-          {industries.map((industry) => (
-            <Link
-              key={industry.slug}
-              href={`/industries/${industry.slug}`}
-              className="rounded-md border border-line bg-elevated p-6 transition hover:border-signal"
-            >
-              <h2 className="bv-h3">{t(industry.name, l)}</h2>
-              <p className="mt-2 text-sm text-muted">{t(industry.summary, l)}</p>
-            </Link>
-          ))}
-        </Container>
-      </Section>
+      <section className="bv-section">
+        <div className="bv-container">
+          <ImmersiveIndustries
+            title={tr("title")}
+            body={tr("lede")}
+            items={industries.map((industry, i) => ({
+              slug: industry.slug,
+              name: t(industry.name, l),
+              summary: t(industry.summary, l),
+              accent: accents[i % accents.length],
+            }))}
+          />
+        </div>
+      </section>
+      <CTABand />
     </>
   );
 }
